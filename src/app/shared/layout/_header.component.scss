@@ -1,0 +1,128 @@
+
+///////////////////HEADER
+.header {
+    display: flex;
+    width: 100%;
+    background-color: var(--color-primary);
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+////////////////////SEARCH
+.search {
+    display: flex;
+    flex: 0 0 40%;
+    align-items: center;
+    justify-content: center;
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--color-grey-light);
+        border: none;
+        border-radius: 100px;
+        padding: .7rem 2rem;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.5rem;
+        &:focus {
+            outline: none;
+            width: 100%;
+        }
+    }
+
+    &__button {
+        border: none;
+        border-radius: 50%;
+    }
+
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+//////////////////LOGO
+.logo {
+    margin-left: 2.5rem;
+    height: 6rem;
+    width: 6rem;
+}
+
+/////////////////USER-NAV
+.user-nav {
+    display: flex;
+    margin-right: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    &__user {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    &__icon-user {
+        height: 3.5rem;
+        width: 3.5rem;
+        border-radius: 50%;
+    }
+
+    &__icon {
+      height: 2.5rem; 
+      width: 2.5rem;
+      fill: var(--color-grey-light-1);
+    }
+
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+    }
+
+    & > *:hover {
+        background-color: var(--color-hover);
+        height: 100%;
+    }
+
+    &__notification {
+        height: 1.5rem;
+        width: 1.5rem;
+        font-size: 1rem;
+        position: absolute;
+        border-radius: 50%;
+        background-color: var(--color-radius-background);
+        top: 1rem;
+        left: 4rem;
+    }
+
+    &__name {
+        margin-left: 1rem;
+        font-weight: bold;
+        color: var(--color-grey-light-1);
+    }
+
+    &__address {
+        font-weight: bold;
+        z-index: 1000;
+    }
+
+    &__icon-user {
+        border-radius: 50%;
+        background-color: var(--color-radius-background);
+    }
+
+    &__logout {
+        display: flex;
+        align-items: center;
+    }
+}

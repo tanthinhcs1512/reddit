@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "reddit"
+    }
+  },
+  "defaultProject": "reddit",
+  "cli": {
+    "analytics": "c5d49689-e0c4-4e90-a4a8-3f4b653ab7b8"
+  }
 }

@@ -1,0 +1,184 @@
+.lg-container {
+    background-color: var(--color-primary);
+    height: 100vh;
+    z-index: 1500;
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    ///////////////CONTAINER
+    &__container {
+        max-width: 110rem;
+        height: 80vh;
+        margin: 8rem auto;
+        background-image: url('./img/7fea175e13ba4a4b29672d15b2497367.jpg');
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        border-radius: .5rem;
+    }
+
+    &__main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1500;
+        clip-path: polygon(0 0, 50% 0, 40% 100%, 0 100%);
+        background-color: var(--color-grey-light-1);
+        border-radius: .5rem;
+    }
+
+    &__form {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: inherit;
+        padding: 6rem;
+
+        &__heading-secondary {
+            text-align: center;
+        }
+    }
+
+    &__link-bottom {
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        transform: translateX(20%);
+        margin-bottom: 2rem;
+    }
+
+    &__content-bottom {
+        font-size: 1.2rem;
+        display: block;
+    }
+
+    &__btn {
+        width: 9rem;
+        font-family: inherit;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__btn:active {
+        outline: none;
+        cursor: pointer;
+    }
+
+    &__btn--pink{
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        border-radius: 1rem;
+        padding: 0rem 1rem
+    }
+}
+
+//////////////FORM
+.form {
+
+    &__u-margin-bottom-big {
+        margin-bottom: 3rem;
+    }
+
+    &__heading-secondary {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        color: var(--color-primary);
+    }
+
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: .2rem;
+        border: none;
+        //background-color: rgba(var(--color-white), .5);
+        border-bottom: .3rem solid transparent;
+        width: 100%;
+        height: 2rem;
+        display: block;
+        transition: all .3s;
+        margin-top: .7rem;
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color: var(--color-primary), $alpha: .1);
+            border-bottom: .3rem solid var(--color-primary);
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: block;
+    
+    }
+
+    &::-webkit-input-placeholder {
+        color: black;
+        font-weight: bold;
+    }
+
+    &__btn {
+        cursor: pointer;
+        position: absolute;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 3rem;
+        border: none;
+        text-align: center;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__btn:active {
+        cursor: pointer;
+        outline: none;
+    }
+
+    &__action {
+        margin-top: 5rem;
+        position: relative;
+    }
+
+    &__btn--white {
+        background-color: var(--color-white);
+        color: var(--color-primary);
+        font-size: 2rem;
+        padding: 0.5rem 1rem;
+    }
+
+
+}
+
+////////////CHECKBOX
+#toggleRegister {
+    bottom: 0;
+    position: absolute;
+    transform: translate(550%, -25%);
+    z-index: 1000;
+}
+
+////////////////////////
+////LOGIN-REGISTER
+.register--title {
+   display: none;
+}
+
+#toggleRegister:checked ~ .login--title {
+    display: none;
+}
+
+#toggleRegister:checked ~ .register--title {
+    display: inline;
+}
