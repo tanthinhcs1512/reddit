@@ -1,6 +1,11 @@
 
-<app-layout-login *ngIf="!isAuthenticated" (isLoginStatus)="countChangedHandler($event)">
+<app-layout-login
+    *ngIf="isAuthenticated"
+    (isLoginStatus)="countChangedHandler($event)">
 </app-layout-login>
-<ng-container *ngIf="isAuthenticated">
+<ng-container *ngIf="!isAuthenticated">
     <app-layout-header></app-layout-header>
+    <div class="content">
+        <app-layout-navigation class="sidebar"></app-layout-navigation>
+    </div>
 </ng-container>

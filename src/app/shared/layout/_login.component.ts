@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { UserService } from '../../core/_services';
+import { UserService } from '../../core/services';
 
 @Component({
   selector: 'app-layout-login',
@@ -9,7 +10,7 @@ import { UserService } from '../../core/_services';
 export class LoginComponent implements OnInit {
   email: string;
   password: string;
-  constructor(private authenticationService: UserService) {}
+  constructor(private authenticationService: UserService, public http: HttpClient) {}
   @Input() isLogin: boolean;
 
   @Output() isLoginStatus: EventEmitter<boolean> = new EventEmitter();
@@ -23,6 +24,11 @@ export class LoginComponent implements OnInit {
     this.email = 'thinh';
     this.password = '1234578';
     console.log(this.email);
-    this.authenticationService.populate();
+    this.authenticationService.checkAuth();
+    // this.http.get('https://example.com/api/things')
+    //   .subscribe(
+    //     data => console.log(data),
+    //     err => console.log(err)
+    //   );
   }
 }

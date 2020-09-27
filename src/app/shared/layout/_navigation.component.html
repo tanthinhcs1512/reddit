@@ -1,0 +1,14 @@
+<nav class="_sidebar">
+    <ul class="side-nav">
+        <li class="side-nav__item"
+            [ngClass]="{'side-nav__item--active': selectedItem == heros}"
+            *ngFor="let heros of heroes; let i = index"
+            (click)="listClick($event, heros)"
+        >
+            <a class="side-nav__link" href="#"><span>{{ heros }}</span></a>
+        </li>
+    </ul>
+    <div class="legal">
+        &copy; 2020 by ThinhTT4.
+    </div>
+</nav>
