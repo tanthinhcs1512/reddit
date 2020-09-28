@@ -10,12 +10,12 @@ import { HeaderComponent } from './shared';
 import { NavigationComponent } from './shared';
 
 //////////////////////CONTENT
-import { LoginComponent } from './shared';
+import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavigationComponent, LoginComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule],
+  declarations: [AppComponent, HeaderComponent, NavigationComponent],
+  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule, AuthModule],
   providers: [],
   bootstrap: [AppComponent],
 })

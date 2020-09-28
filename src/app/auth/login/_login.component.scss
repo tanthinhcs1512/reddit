@@ -6,6 +6,10 @@
     left: 0;
     right: 0;
 
+    &__btn-checkbox {
+        opacity: 0;
+    }
+
     ///////////////CONTAINER
     &__container {
         height: 100vh;

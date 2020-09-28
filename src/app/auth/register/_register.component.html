@@ -2,30 +2,10 @@
     <div class="lg-container__container">
         <div class="lg-container__main">
             <div class="lg-container__form">
-                <input type="checkbox" id="toggleRegister" class="lg-container__link-bottom"/>
                 <div class="lg-container__link-bottom login--title">
-                    <span class="lg-container__content-bottom">If you dont have a account ? Then you can </span>
-                    <button class="lg-container__btn lg-container__btn--pink login--title">Register &rarr;</button>
-                </div>
                 <div class="lg-container__link-bottom register--title">
                     <span class="lg-container__content-bottom">If you have a account ? Then you can </span>
-                    <button class="lg-container__btn lg-container__btn--pink">Login &rarr;</button>
-                </div>
-                <div action="#" class="form login--title">
-                    <div class="form__u-margin-bottom-big">
-                        <h2 class="form__heading-secondary">Sign-in account</h2>
-                    </div>
-                    <div class="form__group">
-                        <label for="email" class="form__label">Email Address</label>
-                        <input type="text" class="form__input" placeholder="Email Address" id="email" required>
-                    </div>
-                    <div class="form__group">
-                        <label for="password" class="form__label">Password</label>
-                        <input type="password" class="form__input" placeholder="Password" id="password" required>
-                    </div>
-                    <div class="form__group form__action">
-                        <button (click)="isLoginForm()" class="form__btn form__btn--white">Login</button>
-                    </div>
+                    <a routerLink="auth/login"  class="lg-container__btn lg-container__btn--pink">Login &rarr;</a>
                 </div>
                 <div action="#" class="form register--title">
                     <div class="form__u-margin-bottom-big">
@@ -52,11 +32,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="lg-container__link-bottom">
-                <span class="lg-container__link-bottom lg-container__content-bottom">You can choose ? </span>
-                <button class="lg-container__link-bottom lg-container__btn lg-container__btn--pink login--title">Register &rarr;</button>
-                <button class="lg-container__link-bottom lg-container__btn lg-container__btn--pink register--title">Login &rarr;</button>
-            </div> -->
         </div>
     </div>
 </div>
