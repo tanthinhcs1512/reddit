@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   }
 
   countChangedHandler(isLogin: boolean) {
-    console.log(isLogin);
     this.isAuthenticated = isLogin;
     console.log(this.isAuthenticated + 'sdsdsdsd');
   }

@@ -1,8 +1,8 @@
 .lg-container {
-    background-color: var(--color-primary);
-    height: 100vh;
-    z-index: 1500;
-    position: fixed;
+    background-color: var(--color-green-primary);
+    max-width: 128rem;
+    margin: 8rem auto;
+    height: 80vh;
     left: 0;
     right: 0;
 
@@ -12,7 +12,7 @@
 
     ///////////////CONTAINER
     &__container {
-        height: 100vh;
+        height: 80vh;
         background-image: url('./img/7fea175e13ba4a4b29672d15b2497367.jpg');
         background-size: cover;
         background-position: top;
@@ -47,7 +47,7 @@
 
     &__link-bottom {
         position: absolute;
-        display: inline-block;
+        display: flex;
         bottom: 0;
         transform: translateX(20%);
         margin-bottom: 2rem;
@@ -165,26 +165,4 @@
     }
 
 
-}
-
-////////////CHECKBOX
-#toggleRegister {
-    bottom: 0;
-    position: absolute;
-    transform: translate(550%, -25%);
-    z-index: 1000;
-}
-
-////////////////////////
-////LOGIN-REGISTER
-.register--title {
-   display: none;
-}
-
-#toggleRegister:checked ~ .login--title {
-    display: none;
-}
-
-#toggleRegister:checked ~ .register--title {
-    display: inline;
 }

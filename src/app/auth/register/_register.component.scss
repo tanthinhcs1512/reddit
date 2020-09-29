@@ -47,7 +47,7 @@
 
     &__link-bottom {
         position: absolute;
-        display: inline-block;
+        display: flex;
         bottom: 0;
         transform: translateX(20%);
         margin-bottom: 2rem;
@@ -75,7 +75,8 @@
         color: var(--color-white);
         background-color: var(--color-primary);
         border-radius: 1rem;
-        padding: 0rem 1rem
+        padding: 0rem 1rem;
+        text-align: center;
     }
 }
 
@@ -165,26 +166,4 @@
     }
 
 
-}
-
-////////////CHECKBOX
-#toggleRegister {
-    bottom: 0;
-    position: absolute;
-    transform: translate(550%, -25%);
-    z-index: 1000;
-}
-
-////////////////////////
-////LOGIN-REGISTER
-.register--title {
-   display: none;
-}
-
-#toggleRegister:checked ~ .login--title {
-    display: none;
-}
-
-#toggleRegister:checked ~ .register--title {
-    display: inline;
 }
