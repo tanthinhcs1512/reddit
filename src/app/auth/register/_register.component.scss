@@ -1,6 +1,8 @@
 .lg-container {
     background-color: var(--color-primary);
-    height: 100vh;
+    max-width: 128rem;
+    margin: 8rem auto;
+    height: 80vh;
     z-index: 1500;
     position: fixed;
     left: 0;
@@ -12,7 +14,7 @@
 
     ///////////////CONTAINER
     &__container {
-        height: 100vh;
+        height: 80vh;
         background-image: url('./img/7fea175e13ba4a4b29672d15b2497367.jpg');
         background-size: cover;
         background-position: top;

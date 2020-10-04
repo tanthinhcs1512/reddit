@@ -1,0 +1,10 @@
+<header class="header-content">
+    <ul class="header-content__ul">
+        <li class="header-content__item"
+            [ngClass]="{'header-content__item--active': selectedItem == heros}"
+            *ngFor="let heros of subRoutes?.lst; let i = index"
+        >
+            <a class="header-content__link" href="/pages/{{ subRoutes.parent }}/{{ heros.path }}"><span>{{ heros.name }}</span></a>
+        </li>
+    </ul>
+</header>

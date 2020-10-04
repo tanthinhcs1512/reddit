@@ -8,8 +8,8 @@
     --color-radius-background: #FFFFCC;
     --color-white: #FFF;
     --color-green-primary: #55c57a;
-    --color-green-primary: #7ed56f;
-    --color-green-primary: #28b485;
+    --color-green-primary-1: #7ed56f;
+    --color-green-primary-2: #28b485;
     --color-grey-dark-1: #333;
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999; 
@@ -44,4 +44,9 @@ body {
     background-color: var(--color-grey-dark-1);
     flex: 0 0 18%;
     height: 91vh;
+}
+
+.view-pages {
+    flex: 1 0;
+    padding : 4rem;
 }

@@ -6,22 +6,23 @@
                     <span class="lg-container__content-bottom">If you dont have a account ? Then you can </span>
                     <a href="/auth/register" routerLink="/auth/register" class="lg-container__btn lg-container__btn--pink login--title">Register &rarr;</a>
                 </div>
-                <div action="#" class="form">
+                <form class="form">
                     <div class="form__u-margin-bottom-big">
                         <h2 class="form__heading-secondary">Sign-in account</h2>
                     </div>
                     <div class="form__group">
                         <label for="email" class="form__label">Email Address</label>
-                        <input type="text" class="form__input" placeholder="Email Address" id="email" required>
+                        <input type="text" class="form__input" name="email" placeholder="Email Address" id="email" [(ngModel)]="email1"
+                        minlength="4" maxlength="20" required>
                     </div>
                     <div class="form__group">
                         <label for="password" class="form__label">Password</label>
-                        <input type="password" class="form__input" placeholder="Password" id="password" required>
+                        <input type="password" class="form__input" placeholder="Password" id="password" [(ngModel)]="password1" required>
                     </div>
                     <div class="form__group form__action">
-                        <button (click)="isLoginForm()" class="form__btn form__btn--white">Login</button>
+                        <button (click)="signIn()" class="form__btn form__btn--white">Login</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

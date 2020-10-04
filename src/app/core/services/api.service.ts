@@ -1,42 +1,58 @@
-import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
-import { HttpHeaders, HttpClient, HttpParams } from '@angular/common/http';
-import { Observable ,  throwError } from 'rxjs';
-
-import { catchError } from 'rxjs/operators';
-
-@Injectable()
+import { Injectable } from '@angular/core'
+import { HttpParams } from '@angular/common/http'
+import { Observable } from 'rxjs'
+import { HttpService } from './http.service'
+import { UrlService } from './url.service'
+import { TokenService } from './token.service'
+import { User } from '../models/user.model'
+import { Screen } from '../models/screen.model'
+import { ScreenSub } from '../models/screensub.model'
+import { map } from 'rxjs/operators';
+ 
+@Injectable({
+  providedIn: 'root'
+}) 
 export class ApiService {
+  
   constructor(
-    private http: HttpClient
-  ) {}
+    private http: HttpService, 
+    private urls: UrlService,
+    private tokenService: TokenService) { }
 
-  private formatErrors(error: any) {
-    return  throwError(error.error);
+
+  login(data: any): Observable<User> {
+    const url = this.urls.getLoginUrl();
+    return this.http.post(url, data).
+      pipe(map(response => response.user));
   }
 
-  get(path: string, params: HttpParams = new HttpParams()): Observable<any> {
-    return this.http.get(`${environment.apiUrl}${path}`, { params })
-      .pipe(catchError(this.formatErrors));
+  signUp(user: any): Observable<User> {
+    const url = this.urls.getUsersUrl();
+    return this.http.post(url, user).
+      pipe(map(response => response.user));
   }
 
-  put(path: string, body: Object = {}): Observable<any> {
-    return this.http.put(
-      `${environment.apiUrl}${path}`,
-      JSON.stringify(body)
-    ).pipe(catchError(this.formatErrors));
+  getCurrentUser(): Observable<User> {
+    const url = this.urls.getCurrentUserUrl();
+    return this.http.get(url, null, this.tokenService.getToken()).
+      pipe(map(response => response.user));
   }
 
-  post(path: string, body: Object = {}): Observable<any> {
-    return this.http.post(
-      `${environment.apiUrl}${path}`,
-      JSON.stringify(body)
-    ).pipe(catchError(this.formatErrors));
+  updateUser(user: User): Observable<User> {
+    const url = this.urls.getCurrentUserUrl();
+    return this.http.put(url, { user }, this.tokenService.getToken()).
+      pipe(map(response => response.user));
   }
 
-  delete(path): Observable<any> {
-    return this.http.delete(
-      `${environment.apiUrl}${path}`
-    ).pipe(catchError(this.formatErrors));
+  getRoutes(): Observable<Screen[]> {
+    const url = this.urls.getRoutesUrl();
+    return this.http.get(url, null, this.tokenService.getToken()).
+      pipe(map(response => response));
+  }
+
+  getRoutesSubUrl(nameScreen: string): Observable<ScreenSub> {
+    const url = this.urls.getRoutesSubUrl(nameScreen);
+    return this.http.get(url, null, this.tokenService.getToken()).
+      pipe(map(response => response));
   }
 }

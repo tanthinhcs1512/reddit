@@ -5,7 +5,7 @@
             *ngFor="let heros of heroes; let i = index"
             (click)="listClick($event, heros)"
         >
-            <a class="side-nav__link" href="#"><span>{{ heros }}</span></a>
+            <a class="side-nav__link" href="/pages/{{ heros.path }}"><span>{{ heros.name }}</span></a>
         </li>
     </ul>
     <div class="legal">

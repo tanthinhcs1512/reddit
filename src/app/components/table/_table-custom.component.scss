@@ -1,0 +1,157 @@
+.table {
+    font-family: Open sans, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.table thead > tr > .ng2-smart-actions {
+    width: 100px;
+}
+
+.table thead > tr > th {
+    border: 0.0625rem solid var(--color-primary);
+    padding: .375rem .5rem !important;
+    font-family: inherit;
+}
+
+.table thead > tr > td {
+    border: 0.0625rem solid var(--color-primary);
+    padding: .375rem .5rem !important;
+    font-family: inherit;
+}
+
+.table thead > tr > th {
+    border: 0.0625rem solid var(--color-primary);
+    padding: .375rem .5rem !important;
+    font-family: inherit;
+}
+
+.table tbody > tr > td {
+    border: 0.0625rem solid var(--color-primary);
+    padding: .375rem .5rem !important;
+    font-family: inherit;
+}
+
+
+.table tbody > tr > td {
+    border: 0.0625rem solid var(--color-primary);
+}
+
+.ng2-smart-action {
+    position: relative;
+    padding: 0 !important;
+}
+
+.form-control:focus {
+    outline: none;
+}
+
+.table > thead > tr > .ng2-smart-actions-title {
+    position: relative !important;
+}
+
+.table > thead > tr > .ng2-smart-actions > ng2-st-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ng2-smart-action-add-add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem !important;
+    border-color: var(--color-primary);
+    border-radius: .375rem;
+    background-color: var(--color-primary)
+}
+
+.ng2-smart-action-add-add > i::before {
+    font-size: 3.5rem !important;
+    border-color: var(--color-primary);
+    border-radius: .375rem;
+    background-color: var(--color-primary)
+}
+
+
+.ng2-smart-action:link, .ng2-smart-action:visited {
+    text-decoration: none !important;
+}
+
+
+//////////////////////////////////
+
+.table > tbody > tr > .ng2-smart-actions > ng2-st-tbody-edit-delete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ng2-smart-action {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem !important;
+    border-color: var(--color-primary);
+    border-radius: .375rem;
+}
+
+.ng2-smart-action > i::before {
+    font-size: 3.5rem !important;
+    border-color: var(--color-primary);
+    border-radius: .375rem;
+}
+
+
+.ng2-smart-action:link, .ng2-smart-action:visited {
+    text-decoration: none !important;
+}
+// .table tbody > tr > td {
+//     border: 1px solid var(--color-primary);
+//     position: relative;
+// }
+// .table thead > tr:not(:last-child) {
+//     background-color: var(--color-primary);
+// }
+
+// .table tbody > tr:nth-child(even)  { 
+//     background-color:rgb(255, 0, 85);  
+// }
+
+.page-item.disabled .page-link {
+	color: darkgray !important;
+}
+.page-item.active .page-link {
+	background: var(--color-primary) !important;
+	color: white !important;
+	border: 1px solid var(--color-primary) !important;
+}
+.page-item {
+	margin: 3px;
+}
+.page-link {
+	color: var(--color-primary) !important;
+	padding: 8px;
+	padding-left: 14px;
+	padding-right: 14px;
+	border-radius: 4px !important;
+}
+.page-link:hover {
+	background-color: var(--color-primary) !important;
+	color: white !important;
+	border: 1px solid black;
+}
+.ng2-smart-pagination .page-link-next,
+.ng2-smart-pagination .page-link-prev {
+	font-size: 14px !important;
+}
+.ng2-smart-page-item a:hover {
+	text-decoration: none !important;
+}
+
+.ng2-smart-pagination-nav {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
