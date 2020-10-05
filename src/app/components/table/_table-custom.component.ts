@@ -1,12 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-cpn-table',
@@ -43,10 +35,8 @@ export class TableCustomComponent implements OnInit {
   @Input('settings')
   set setting(settings: any) {
     this.settings = settings;
-    console.log(this.settings);
     this._setting['columns'] = this.settings['columns'];
     this._setting['attr'] = this.settings['attr'];
-    //console.log(this._setting);
   }
 
   @Input('data_table')
